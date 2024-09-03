@@ -28,19 +28,24 @@ function sortArr( arr )
 
 function sumOfNumber(arr)
 {
-    return arr.reducer(( acc , val ) => acc + val ) ;
+    return arr.reduce(( acc , val ) => acc + val ) ;
 }
 
 function avgNumber( arr )
 {
-    return (arr.reducer(( acc , val ) => acc + val ) / arr.length ) ;
+    return (arr.reduce(( acc , val ) => acc + val ) / arr.length ) ;
 }
 
 
 //  Testing : 
 addNumber(numbers ,  4 ) ; 
+console.log("After Add Number" , numbers) ;
 numbers = removeNumber(numbers ,  3 ) ; 
-console.log(numbers)  ; 
+console.log("After remove" , numbers) ;
+console.log("After sort" , sortArr(numbers)) ;
+console.log("The sum of the number" , sumOfNumber(numbers)) ;
+console.log("The avg of the number",avgNumber(numbers)) ;
+
 
 
 
